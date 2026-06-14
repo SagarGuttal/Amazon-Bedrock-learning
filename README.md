@@ -171,3 +171,136 @@ Amazon Bedrock provides access to foundation models from providers such as:
 ## 🎓 One-Line Definition
 
 > Amazon Bedrock is a fully managed AWS service that provides access to multiple foundation models through a unified API, enabling organizations to build and scale Generative AI applications without managing AI infrastructure.
+
+# Amazon Bedrock – High-Level Architecture
+
+## Overview
+Amazon Bedrock is a fully managed AWS service that enables developers to build and scale Generative AI applications using foundation models from multiple providers without managing infrastructure.
+
+---
+
+## High-Level Architecture
+
+```text
++--------------------------------------------------+
+|               Users / Applications               |
+|  Web Apps | Chatbots | Mobile Apps | APIs        |
++----------------------+---------------------------+
+                       |
+                       v
++--------------------------------------------------+
+|                Amazon Bedrock                    |
+|  - API Gateway                                   |
+|  - Prompt Management                             |
+|  - Agents                                        |
+|  - Guardrails                                    |
+|  - Knowledge Bases                               |
++----------------------+---------------------------+
+                       |
+          +------------+------------+
+          |                         |
+          v                         v
++------------------+     +------------------------+
+| Foundation Models|     | Enterprise Data        |
+| Amazon Nova      |     | Amazon S3             |
+| Anthropic Claude |<--->| SharePoint            |
+| Meta Llama       |     | Databases             |
+| Mistral AI       |     | Confluence            |
+| Cohere           |     | Salesforce            |
++------------------+     +------------------------+
+                       |
+                       v
++--------------------------------------------------+
+|          Security & Monitoring                    |
+| IAM | VPC | Encryption | CloudTrail | Guardrails |
++--------------------------------------------------+
+```
+
+---
+
+## Components
+
+### 1. User / Application Layer
+Applications interact with Amazon Bedrock through APIs.
+
+**Examples:**
+- Web Applications
+- Mobile Applications
+- Chatbots
+- Enterprise Systems
+
+---
+
+### 2. Amazon Bedrock Service Layer
+Amazon Bedrock provides managed GenAI capabilities.
+
+**Features:**
+- API Access
+- Prompt Management
+- Agents
+- Knowledge Bases
+- Guardrails
+
+---
+
+### 3. Foundation Models (FMs)
+Bedrock provides access to multiple AI models through a unified API.
+
+**Supported Providers:**
+- Amazon Nova
+- Anthropic Claude
+- Meta Llama
+- Mistral AI
+- Cohere
+- Stability AI
+
+---
+
+### 4. Enterprise Data Layer
+Organizations can securely connect their internal data sources.
+
+**Data Sources:**
+- Amazon S3
+- SharePoint
+- Databases
+- Confluence
+- Salesforce
+
+**Capabilities:**
+- Retrieval Augmented Generation (RAG)
+- Vector Search
+- Knowledge Bases
+
+---
+
+### 5. Security & Governance Layer
+
+**Security Features:**
+- AWS IAM
+- Encryption at Rest and Transit
+- Amazon VPC
+- AWS CloudTrail
+- Bedrock Guardrails
+
+---
+
+## How Amazon Bedrock Works
+
+1. User sends a prompt from an application.
+2. Application invokes the Amazon Bedrock API.
+3. Bedrock routes the request to the selected foundation model.
+4. Optional: Knowledge Base retrieves relevant enterprise data (RAG).
+5. The model generates a response.
+6. Guardrails validate the output.
+7. The response is returned to the application.
+
+---
+
+## Key Benefits
+
+- No infrastructure management
+- Access to multiple foundation models
+- Enterprise-grade security
+- Easy integration with AWS services
+- Support for RAG and AI Agents
+- Scalable and fully managed service
