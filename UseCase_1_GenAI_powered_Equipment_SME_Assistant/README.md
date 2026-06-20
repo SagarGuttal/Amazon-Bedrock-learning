@@ -247,8 +247,7 @@ Engineers / Technicians / SMEs
 
 ## Solution Architecture Diagram
 
-![Solution Architecture for SME Assistant Flow](UImages/Solution_architecture.png)
-
+![Solution Architecture for SME Assistant Flow](Images/Solution_architecture.png)
 ---
 
 ## High-Level Request Flow
