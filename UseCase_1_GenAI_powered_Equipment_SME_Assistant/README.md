@@ -222,3 +222,66 @@ Equipment SME Assistant
      │
      ▼
 Engineers / Technicians / SMEs
+
+# Solution Architecture for the Use Case – POC to Production
+
+## Architecture Components
+
+### 1. AWS GenAI Service
+- **Amazon Bedrock**
+- Managed service for accessing foundation models and building GenAI applications.
+
+### 2. Foundation Model
+- **Amazon Nova Pro**
+- Used for intelligent question answering, reasoning, troubleshooting, and content generation.
+
+### 3. Compute Layer
+- **AWS Lambda**
+- Serverless compute service for orchestrating workflows, processing requests, and integrating backend systems.
+
+### 4. API Layer
+- **AWS API Gateway**
+- Secure API endpoint for communication between users, applications, and the GenAI backend.
+
+---
+
+## Solution Architecture Diagram
+
+![Solution Architecture for SME Assistant Flow](UImages/Solution_architecture.png)
+
+---
+
+## High-Level Request Flow
+
+```text
+User / Engineer
+       │
+       ▼
+AWS API Gateway
+       │
+       ▼
+AWS Lambda
+       │
+       ▼
+Amazon Bedrock
+       │
+       ▼
+Amazon Nova Pro
+       │
+       ▼
+Generated Response
+       │
+       ▼
+User / Engineer
+```
+
+---
+
+## Key Benefits
+
+- Scalable serverless architecture
+- Secure API-based integration
+- Reduced operational overhead
+- Faster deployment from POC to Production
+- Seamless access to foundation models through Amazon Bedrock
+- High availability and reliability
