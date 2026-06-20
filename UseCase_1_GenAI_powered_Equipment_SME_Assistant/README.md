@@ -52,6 +52,7 @@ The assistant uses Retrieval-Augmented Generation (RAG) and Large Language Model
 # Equipment SME Assistant Project Flow
 
 ![Equipment SME Assistant](Images/SME_workflow.png)
+<img src="Images/SME_workflow.png" width="800" alt="Equipment SME Assistant">
 
 ## Step 1: Data Collection
 
