@@ -195,7 +195,7 @@ Semantic search across:
 
 Identifies patterns indicating potential future failures.
 
----
+
 
 # High-Level Architecture
 
@@ -274,7 +274,6 @@ Generated Response
 User / Engineer
 ```
 
----
 
 ## Key Benefits
 
